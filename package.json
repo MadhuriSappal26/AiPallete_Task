@@ -1,0 +1,21 @@
+{
+  "name": "cypress_qa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --reporter mochawesome --spec cypress/integration/ingredient_graph.js,cypress/integration/customer_quote.js || true",
+    "create:report": "npx mochawesome-merge --reportDir cypress/report/mochawesome-report > mochawesome.json &&npx mochawesome-report-generator mochawesome.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.8.1"
+  },
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "mochawesome": "4.1.0",
+    "mochawesome-merge": "^2.1.0",
+    "mochawesome-report-generator": "^4.1.0"
+  }
+}
