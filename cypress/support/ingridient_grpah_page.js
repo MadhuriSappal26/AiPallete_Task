@@ -7,7 +7,7 @@ Cypress.Commands.add("ingridient_graph",() => {
        headers:
         { 
         'Content-Type':'application/json',
-        'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc3ODExOTM5LCJqdGkiOiJkZTkyODk5YzRiNDk0YTIyOWE1OGM1YzQ5MmYzMThhZiIsInVzZXJfaWQiOjIyOX0.EQRi1a4KkPNYs1aDhcQeNCTZTeO4cxKD2HyM7MWmllk'
+        'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc4MDY3MDU2LCJqdGkiOiIxZmEwYmE1NjgwZTg0MjRjYjU0NjVkMTRkNmI2ZDc0NCIsInVzZXJfaWQiOjIyOX0.TcVGy43Fzg_YrM2aXL9EUTDCeZ_cNjivcml6f3HtA_8'
         },
         'failOnStatusCode': 'false'
         
@@ -32,7 +32,7 @@ Cypress.Commands.add("ingridient_graph",() => {
            headers:
             { 
             'Content-Type':'application/json',
-            'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc3ODExOTUzLCJqdGkiOiI3OGZjODNkNWQ4ZDI0Y2EwOGQzZmY4ZTAzY2RhODczMCIsInVzZXJfaWQiOjIyOX0.Js-L4TaIopIPoxD1SKncML7t3HK2tqMvatS361Tq9eg'
+            'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc4MDY3MDU2LCJqdGkiOiIxZmEwYmE1NjgwZTg0MjRjYjU0NjVkMTRkNmI2ZDc0NCIsInVzZXJfaWQiOjIyOX0.TcVGy43Fzg_YrM2aXL9EUTDCeZ_cNjivcml6f3HtA_8'
             },
             'failOnStatusCode': 'false'
         
@@ -48,6 +48,7 @@ Cypress.Commands.add("ingridient_graph",() => {
             }
 
     })
+    cy.writeFile('cypress/fixtures/missing_graph.txt',"Missing graph ids: " + ids + "\n", {flag:'a+'}) 
 })
 })
 })
